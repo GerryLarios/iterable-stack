@@ -1,12 +1,14 @@
-# Stack
+# iterable-stack
 
- Stack is a linear data structure that store information in the form of a list. They allow only adding and removing elements under a LIFO pattern (last in, first out). Which means that insertions and deletions are performed at the end, called top of the stack.
+Simple Stack data structure with ES6 *iterable* interface
 
- ## Install
+Stack is a linear data structure that store information in the form of a list. They allow only adding and removing elements under a LIFO pattern (last in, first out). Which means that insertions and deletions are performed at the end, called top of the stack.
 
- ```bash
- npm install stack
- ```
+## Install
+
+```bash
+npm install iterable-stack
+```
 
 ## Usage
 

@@ -1,7 +1,7 @@
 {
-  "name": "@gerrylarios/stack",
+  "name": "iterable-stack",
   "version": "1.0.0",
-  "description": "Iterable Stack data structure",
+  "description": "Simple Stack data structure with ES6 iterable interface",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
