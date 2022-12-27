@@ -1,6 +1,6 @@
 {
   "name": "iterable-stack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple Stack data structure with ES6 iterable interface",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,7 +8,7 @@
     "build": "tsc -p .",
     "check-type": "tsc --noEmit",
     "format:fix": "npm run format -- --write",
-    "format": "prettier --check **/*.ts",
+    "format": "prettier --check src/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "lint": "eslint src --ext .ts",
     "postversion": "git push && git push --tags",
