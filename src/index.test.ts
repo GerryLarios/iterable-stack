@@ -72,7 +72,7 @@ describe('Stack', () => {
     expect(set.has(1)).toBeTruthy();
   });
 
-  it('should be an iterable - construct: Promose.all', async () => {
+  it('should be an iterable - construct: Promise.all', async () => {
     // eslint-disable-next-line no-promise-executor-return
     const promise = new Promise((resolve) => resolve(1));
     const stack = new Stack(promise);
@@ -80,7 +80,7 @@ describe('Stack', () => {
     await expect(Promise.all(stack)).resolves.toStrictEqual([1]);
   });
 
-  it('should be an iterable - construct: Promose.race', async () => {
+  it('should be an iterable - construct: Promise.race', async () => {
     // eslint-disable-next-line no-promise-executor-return
     const promise = new Promise((resolve) => resolve(1));
     const stack = new Stack(promise);
