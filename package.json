@@ -10,6 +10,7 @@
     "format": "prettier --check **/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "lint": "eslint src --ext .ts",
+    "test:watch": "npm test -- --watch",
     "test": "jest"
   },
   "repository": {
