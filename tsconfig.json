@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./lib",
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": false,
+    "strictNullChecks": true,
+    "target": "es2016",
+    "declaration": true, 
+  },
+  "exclude": ["node_modules", "coverage", "**/*.test.ts"],
+  "include": ["src"],
+}
