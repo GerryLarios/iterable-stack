@@ -1,8 +1,9 @@
 {
   "name": "stack",
   "version": "1.0.0",
-  "description": "Stack data structure with Typescript",
-  "main": "index.js",
+  "description": "Stack data structure",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "shx rm -rf build/ && tsc -p .",
     "check-type": "tsc --noEmit",
@@ -10,20 +11,26 @@
     "format": "prettier --check **/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "lint": "eslint src --ext .ts",
+    "postversion" : "git push && git push --tags",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion" : "npm run lint",
     "test:watch": "npm test -- --watch",
-    "test": "jest"
+    "test": "jest",
+    "version" : "npm run format && git add -A src"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GerryLarios/stack.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["stack", "data", "structure", "datastructure", "typescript", "type", "iterator", "iterable", "array"],
+  "author": "Gerardo Manuel Chavez Larios",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/GerryLarios/stack/issues"
   },
   "homepage": "https://github.com/GerryLarios/stack#readme",
+  "files": ["lib/**/*"],
   "devDependencies": {
     "@tango-io/eslint-config-tango-node": "^1.0.1",
     "@types/jest": "^29.2.4",
