@@ -71,6 +71,23 @@ class Stack<TValue> {
 
     return value;
   }
+
+  [Symbol.iterator]() {
+    let node = this._top;
+
+    return {
+      next() {
+        if (node) {
+          const { value } = node;
+          node = node.previous;
+
+          return { done: false, value };
+        }
+
+        return { done: true, value: undefined };
+      },
+    };
+  }
 }
 
 export default Stack;
