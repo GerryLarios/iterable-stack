@@ -30,10 +30,14 @@ describe('Stack', () => {
     expect(stack.size).toBe(0);
   });
 
+  it('it should return an array', () => {
+    const stack = new Stack(1, 2, 3);
+
+    expect(stack.toArray).toStrictEqual([3, 2, 1]);
+  });
+
   it('should be an iterable - construct: destructuring', () => {
-    const stack = new Stack(1);
-    stack.push(2);
-    stack.push(3);
+    const stack = new Stack(1).push(2).push(3);
 
     const [first, second, third] = stack;
     expect(first).toBe(3);
@@ -50,17 +54,13 @@ describe('Stack', () => {
   });
 
   it('should be an iterable - construct: Array.from', () => {
-    const stack = new Stack(1);
-    stack.push(2);
-    stack.push(3);
+    const stack = new Stack(1).push(2).push(3);
 
     expect(Array.from(stack)).toStrictEqual([3, 2, 1]);
   });
 
   it('should be an iterable - construct: spread operator', () => {
-    const stack = new Stack(1);
-    stack.push(2);
-    stack.push(3);
+    const stack = new Stack(1).push(2).push(3);
 
     expect([...stack]).toStrictEqual([3, 2, 1]);
   });

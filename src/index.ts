@@ -10,18 +10,13 @@ class Stack<TValue> {
   private _size: number;
 
   /**
-   * @constructor
-   * @param {TValue} [value] The value of the first element of the stack.
+   * @constructor Creates a new Stack object
+   * @param {...TValue[]} values The values for the stack.
    */
-  constructor(value?: TValue) {
-    if (value) {
-      const node = new Node(value);
-      this._top = node;
-      this._size = 1;
-    } else {
-      this._top = null;
-      this._size = 0;
-    }
+  constructor(...values: TValue[]) {
+    this._size = 0;
+    this._top = null;
+    values.forEach((v) => this.push(v));
   }
 
   /**
@@ -56,6 +51,8 @@ class Stack<TValue> {
     }
 
     this._size++;
+
+    return this;
   }
 
   /**
@@ -70,6 +67,16 @@ class Stack<TValue> {
     }
 
     return value;
+  }
+
+  /**
+   * Creates an array with all the elements of the stack following the LIFO pattern.
+   * This method doesn't remove any element.
+   * @return {TValue[]} a new array with all the elements of the stack.
+   */
+
+  public get toArray(): TValue[] {
+    return Array.from(this).filter((v) => v) as TValue[];
   }
 
   [Symbol.iterator]() {
